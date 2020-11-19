@@ -16,6 +16,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from AerApp import views
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path("", views.home, name="Inicio"),
+    path("servicios", views.servicios, name="Servicios"),
+    path("equipo", views.equipo, name="Equipo"),
+    path("publicaciones", views.publicaciones, name="Publicaciones"),
+    path("contacto", views.contacto, name="Contacto"),
 ]
