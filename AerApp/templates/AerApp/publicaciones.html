@@ -11,6 +11,15 @@
 
     {% block content %}
 
+      {% for publicacion in publicaciones %}
+      <div class="">
+        <p>
+          <h2 style="color: white;">{{publicacion.titulo}}</h2>
+          <p style="color: white;">{{publicacion.contenido}}</p>
+          <p><img src="{{publicacion.imagen.url}}" alt=""> </p>
+        </p>
+      </div>
+      {% endfor %}
     {% endblock %}
   </body>
 </html>
