@@ -39,16 +39,16 @@
           <li class="nav-item {% if request.path == '/' %}active{% endif %} px-lg-4">
             <a class="nav-link text-uppercase text-expanded" href="{% url 'Inicio' %}">Inicio</a>
           </li>
-          <li class="nav-item {% if request.path == '/servicios' %}active{% endif %} px-lg-4">
+          <li class="nav-item {% if request.path == '/servicios/' %}active{% endif %} px-lg-4">
             <a class="nav-link text-uppercase text-expanded" href="{% url 'Servicios' %}">Servicios</a>
           </li>
-          <li class="nav-item {% if request.path == '/equipo' %}active{% endif %} px-lg-4">
+          <li class="nav-item {% if request.path == '/equipo/' %}active{% endif %} px-lg-4">
             <a class="nav-link text-uppercase text-expanded" href="{% url 'Equipo' %}">Equipo</a>
           </li>
-          <li class="nav-item {% if request.path == '/publicaciones' %}active{% endif %} px-lg-4">
+          <li class="nav-item {% if request.path == '/publicaciones/' %}active{% endif %} px-lg-4">
             <a class="nav-link text-uppercase text-expanded" href="{% url 'Publicaciones' %}">Publicaciones</a>
           </li>
-          <li class="nav-item {% if request.path == '/contacto' %}active{% endif %} px-lg-4">
+          <li class="nav-item {% if request.path|slice:':6' == '/contacto/' %}active{% endif %} px-lg-4">
             <a class="nav-link text-uppercase text-expanded" href="{% url 'Contacto' %}">Contacto</a>
           </li>
 
