@@ -2,16 +2,16 @@ from django.db import models
 
 # Create your models here.
 
-class Publicacion(models.Model):
+class Servicio(models.Model):
     titulo=models.CharField(max_length=50)
     contenido=models.TextField()
-    imagen=models.ImageField(upload_to='publicaciones')
+    imagen=models.ImageField(upload_to='servicios')
     creado=models.DateTimeField(auto_now_add=True)
     actualizado=models.DateTimeField(auto_now_add=True)
 
     class Meta:
-        verbose_name="publicacion"
-        verbose_name_plural="publicaciones"
+        verbose_name="servicio"
+        verbose_name_plural="servicios"
 
     def __str__(self):
         return self.titulo
