@@ -25,7 +25,13 @@
              </h2>
 
              <div style="text-align: left; font-size: 0.8em"  class="">
-               Autor: {{post.autor}}
+               Autor: {{post.autor}} <br>
+               Categoria:
+               {% for categoria in post.categorias.all %}
+                <a href="{% url 'categoria' categoria.id %}" class="linksCategorias"> {{categoria.nombre}} </a>
+               {% endfor %}
+ <br>
+               Fecha: {{post.creado}} <br>
 
              </div>
 
