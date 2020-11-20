@@ -9,8 +9,7 @@ def home(request):
 def equipo(request):
     return render(request, "AerApp/equipo.html")
 
-def publicaciones(request):
-    return render(request, "AerApp/publicaciones.html")
+
 
 def contacto(request):
     return render(request, "AerApp/contacto.html")
